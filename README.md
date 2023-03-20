@@ -42,6 +42,12 @@ Husky is a tool that enables static code analysis checks to run automatically be
 
 PNPM is a package manager that offers several advantages over other package managers such as npm and Yarn. PNPM provides faster installation and updates, reduced disk space usage, and improved security. It achieves these benefits by using a shared cache for dependencies, which means that if multiple projects use the same dependencies, they only need to be installed once. This can greatly reduce installation and update times, especially for large projects with many dependencies. PNPM also automatically verifies the integrity of dependencies during installation, which can help prevent security vulnerabilities from being introduced into the project.
 
+## Chakra UI
+
+Why Chakra UI?
+
+Chakra UI provides developers with a powerful set of tools and components that help streamline the UI development process, improve accessibility, and ensure a consistent and performant user experience. It comes with pre-made components with great accessiblity defaults out of the box and a powerful theming system to customize the look and feel of the application with ease, making it easier to maintain a consistent brand identity and adapt to changing design requirements. Chakra UI is designed with performance in mind, using techniques such as lazy loading and code splitting to ensture that the application loads quickly and is responsive to user interactions. It also has a great community support.
+
 ## App Specifications
 
 Below are the specifications for this Job Board app
