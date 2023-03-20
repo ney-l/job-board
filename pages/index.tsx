@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import { Button } from '@/components/button';
 import { InputField } from '@/components/form';
 import { Link } from '@/components/link';
-import { Seo } from '@/components/seo/seo';
+import { Seo } from '@/components/seo';
 
 const Home: NextPage = () => {
   return (
