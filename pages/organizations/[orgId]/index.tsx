@@ -5,6 +5,7 @@ import {
 } from 'next';
 import { ReactElement } from 'react';
 
+import { NotFound } from '@/components/not-found';
 import { Seo } from '@/components/seo';
 import { OrgInfo } from '@/features/organizations';
 import { PublicLayout } from '@/layouts';
@@ -16,7 +17,7 @@ type PublicOrganizationPageProps =
 const PublicOrganizationPage = ({
   org,
 }: PublicOrganizationPageProps) => {
-  if (!org) return <div>No organization found!</div>;
+  if (!org) return <NotFound />;
 
   return (
     <>
@@ -44,7 +45,7 @@ export const getServerSideProps = async ({
   params,
 }: GetServerSidePropsContext) => {
   const orgId = params?.orgId as string;
-  const org = await getOrg(orgId);
+  const org = (await getOrg(orgId)) ?? null;
   return {
     props: {
       org,
