@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint --ext .ts,.tsx ./ --no-error-on-unmatched-pattern",
+    "lint:fix": "eslint --ext .ts,.tsx ./ --no-error-on-unmatched-pattern --fix",
+    "prettier": "prettier --ignore-path .prettierignore '**/*.+(json|ts|tsx)'",
+    "format:check": "npm run prettier -- --check",
+    "format:fix": "npm run prettier -- --write",
+    "types:check": "tsc --noEmit --pretty",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "12.3.4",
@@ -17,8 +23,16 @@
     "@types/node": "18.15.3",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
-    "eslint": "8.36.0",
-    "eslint-config-next": "13.2.4",
+    "@typescript-eslint/eslint-plugin": "5.36.1",
+    "@typescript-eslint/parser": "5.36.1",
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.2.5",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "2.7.1",
     "typescript": "5.0.2"
   }
 }
