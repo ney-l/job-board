@@ -100,9 +100,11 @@ export const getJobsByOrgId = async (orgId: string) => {
   );
 };
 
-export const getJobById = async (id: string) => {
+export const getJobById = async (
+  id: string
+): Promise<Job | null> => {
   return Promise.resolve(
-    data.jobs.find((job) => job.id === id)
+    data.jobs.find((job) => job.id === id) ?? null
   );
 };
 
@@ -152,6 +154,27 @@ export const useJobs = (orgId: string) => {
       })
     );
   }, [orgId]);
+
+  return state;
+};
+
+export const useJob = (jobId: string) => {
+  const [state, setState] = useState<{
+    isLoading: boolean;
+    data: Job | null;
+  }>({
+    isLoading: true,
+    data: null,
+  });
+
+  useEffect(() => {
+    getJobById(jobId).then((job) =>
+      setState({
+        isLoading: false,
+        data: job,
+      })
+    );
+  }, [jobId]);
 
   return state;
 };
