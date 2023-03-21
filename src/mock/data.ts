@@ -5,21 +5,21 @@ const data = {
       createdAt: 1645628972465,
       email: 'user1@test.com',
       password: 'password',
-      organizationId: 'amYXmIyT9mD9GyO6CCr',
+      orgId: 'amYXmIyT9mD9GyO6CCr',
     },
     {
       id: 'wR7sTzKlPhN8aXf3kGvIq',
       createdAt: 1645643918920,
       email: 'user2@test.com',
       password: 'password',
-      organizationId: 'jM4nLbH8lWzAoUv1RpQe',
+      orgId: 'jM4nLbH8lWzAoUv1RpQe',
     },
     {
       id: 'uZ6mDkG9cEhYbV7pN3wQt',
       createdAt: 1645702917249,
       email: 'user3@test.com',
       password: 'password',
-      organizationId: 'jM4nLbH8lWzAoUv1RpQe',
+      orgId: 'jM4nLbH8lWzAoUv1RpQe',
     },
   ],
   organizations: [
@@ -46,7 +46,7 @@ const data = {
     {
       id: 'wS6UeppUQoiXGTzAI6XrM',
       createdAt: 1647070016299,
-      organizationId: 'amYXmIyT9mD9GyO6CCr',
+      orgId: 'amYXmIyT9mD9GyO6CCr',
       position: 'Product Manager',
       info: 'Sequi accusantium repellat ea eius nulla consectetur sit. Quia et dolorem consequatur dolores quae. Et accusamus incidunt hic. Est dolores odio autem molestiae dicta minus laborum. Quia et nobis non officia. Itaque ipsam enim libero dolor aut est quas. Dolor nemo impedit quod illum. Ea tempora aut. Commodi nulla ut corporis. Est ipsum nulla expedita labore ut commodi. Fuga non quam sint fuga. Temporibus accusamus maiores. Ut cupiditate distinctio. Ratione iure quis saepe officia fugit autem. Alias voluptatem accusantium doloribus est et est sunt. Laboriosam ut aspernatur omnis doloremque ducimus eveniet incidunt eius. Quo cumque quas sit et. Non porro placeat nobis perferendis. Assumenda voluptas tempora eum quia aut voluptatem. Similique facere ullam saepe unde totam vel nihil velit. Tempora fuga sint praesentium. Est nihil asperiores sed perferendis id magni. Voluptatem deserunt sint. Consectetur velit qui et atque ea quis. Omnis omnis qui et est. Rerum dignissimos asperiores. Aut rem voluptatem dolor. Animi iure provident in et et voluptatem cumque itaque. Enim ipsum aspernatur autem fugit beatae et. Alias ut nostrum expedita vel et perferendis. Error aliquam distinctio fugiat voluptatem numquam dolorum. Omnis quam consequatur occaecati aliquam. Nesciunt doloremque atque fugit voluptates omnis praesentium. Provident aliquam ex delectus. Corporis ut omnis. Rerum adipisci cum dolor deserunt. Quo voluptatum quae dolor voluptates. Nam placeat optio ex sed inventore nihil labore. Optio aliquam',
       location: 'London',
@@ -55,7 +55,7 @@ const data = {
     {
       id: 'sT2nQfY7jJvOcL1xH8aB',
       createdAt: 1647115814990,
-      organizationId: 'amYXmIyT9mD9GyO6CCr',
+      orgId: 'amYXmIyT9mD9GyO6CCr',
       position: 'Software Engineer',
       info: 'Quam molestiae adipisci quas ipsa. Sint culpa quas repellat cum doloremque aut officia. Sed voluptas maxime perspiciatis doloremque. Impedit laboriosam in modi rem enim maxime. Mollitia aut a itaque totam officia. Eaque omnis molestiae doloribus. Et tempore repellendus est sint id. Aliquid quas qui adipisci. Ea numquam consequuntur vel nemo. Autem repellat nulla fuga animi eligendi non. Voluptate enim blanditiis. Temporibus rem itaque. Rem aliquam excepturi odit aperiam porro aspernatur ad. Odio dolore alias sint autem quae repellat voluptatibus autem. Sequi aut ea corporis aut aliquam aut distinctio ipsam. Accusantium dolorum rerum provident. Rem et iusto impedit numquam. Et quos expedita est sed. Et officiis et eum quisquam repellendus facilis. Quod excepturi quidem ipsam animi enim. Id voluptas natus molestias omnis beatae quibusdam. Omnis sequi qui eum ut suscipit ut. Possimus enim iure natus. Sed necessitatibus sequi. Qui sint sapiente autem voluptatem tempore vel iste. Iusto corporis sunt magni expedita itaque. Ab quasi qui id aut et. Sequi est debitis molestiae. Consequatur magnam qui quia. Doloribus veniam ut qui corporis. Quia occaecati sint nihil est et maiores. Voluptatem quibusdam ullam laboriosam voluptas et. Et voluptatem ad dolores. Reprehenderit distinctio odit est molestiae. Quia expedita a voluptas et sunt. Nihil dolor eos ullam eos asperiores repellendus. Iure earum molestias ut. Fugit asperiores ut ipsam et ut molestiae. Veniam eveniet minus exercitationem quis vel. Aperiam minima aut cum voluptatem saepe veniam. Magnam aliquid ut aut. Vitae ab dolorem ut eos nobis dolore. Vel consequatur accusantium. Velit maiores non velit a distinctio. Et atque doloribus autem doloremque itaque voluptas.',
       location: 'San Francisco',
@@ -64,14 +64,16 @@ const data = {
     {
       id: 'uV8fMxN5sSbZpA6oD7hY',
       createdAt: 1647268722006,
-      organizationId: 'jM4nLbH8lWzAoUv1RpQe',
+      orgId: 'jM4nLbH8lWzAoUv1RpQe',
       position: 'Sales Manager',
       info: 'Minus adipisci corrupti aut. Quas id id est possimus aut doloremque. Est sequi sapiente voluptates aliquid quidem nihil. Non necessitatibus odit omnis. Alias veniam est placeat. Iste autem consectetur tenetur ipsum. Eum minus et. Sit consequatur qui voluptatibus nisi numquam laboriosam. Qui est libero eaque. Deleniti et et culpa ipsa. F',
+      location: 'Frankfurt',
+      department: 'Development',
     },
     {
       id: 'aR9vGkW4yNtCxL6fQ2jI',
       createdAt: 1647153369147,
-      organizationId: 'jM4nLbH8lWzAoUv1RpQe',
+      orgId: 'jM4nLbH8lWzAoUv1RpQe',
       position: 'Marketing Analyst',
       info: 'Sit et quisquam eveniet aliquid voluptatem dolores. Voluptatem dolores eaque. Commodi sint incidunt quibusdam et illum perspiciatis dignissimos sit. Quod excepturi consequuntur qui asperiores dignissimos. Aut enim quia nemo et dolore iste. Voluptas et eum autem corporis eligendi corrupti harum. Sed earum soluta officiis fuga. Doloremque cupiditate aliquam omnis. Nam iste doloremque illum saepe nobis. Rerum distinctio id alias non sed. Nesciunt officiis nisi. Molestiae qui suscipit est. Quam iure sit ut molestias modi. Accusantium impedit numquam et et culpa voluptas doloremque consequatur. Sint aut laudantium. Voluptas commodi eos. Dolorem eos quae vel mollitia sit est. Ea minus repellendus. Quo soluta autem ullam reiciendis corporis. Quae labore incidunt voluptates velit ea quia architecto magnam. Harum asperiores molestiae blanditiis magnam. Aut cumque quisquam. Doloremque vel magni. Accusamus nobis illo sunt iure. Sequi excepturi et accusantium impedit animi dolor. Sit velit qui. Nam impedit cumque in voluptas sunt. Ut aliquid architecto et. Error ut ab explicabo nihil. Dolore autem provident architecto voluptatum est voluptatum. Et sint optio sed. Et tempore autem molestias illo illum.',
       location: 'New York',
@@ -85,6 +87,12 @@ export const getJobs = () => data.jobs;
 export const getOrg = async (id: string) => {
   return Promise.resolve(
     data.organizations.find((org) => org.id === id)
+  );
+};
+
+export const getJobsByOrgId = async (orgId: string) => {
+  return Promise.resolve(
+    data.jobs.filter((job) => job.orgId === orgId)
   );
 };
 

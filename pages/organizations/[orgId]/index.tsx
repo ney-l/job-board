@@ -1,4 +1,4 @@
-import { Stack } from '@chakra-ui/react';
+import { Heading, Stack } from '@chakra-ui/react';
 import {
   GetServerSidePropsContext,
   InferGetServerSidePropsType,
@@ -7,15 +7,17 @@ import { ReactElement } from 'react';
 
 import { NotFound } from '@/components/not-found';
 import { Seo } from '@/components/seo';
+import { JobsList } from '@/features/jobs';
 import { OrgInfo } from '@/features/organizations';
 import { PublicLayout } from '@/layouts';
-import { getOrg } from '@/mock';
+import { getJobsByOrgId, getOrg } from '@/mock';
 
 type PublicOrganizationPageProps =
   InferGetServerSidePropsType<typeof getServerSideProps>;
 
 const PublicOrganizationPage = ({
   org,
+  jobs,
 }: PublicOrganizationPageProps) => {
   if (!org) return <NotFound />;
 
@@ -32,6 +34,16 @@ const PublicOrganizationPage = ({
         p="4"
       >
         <OrgInfo org={org} />
+
+        <Heading size="md" my="6">
+          Open Jobs
+        </Heading>
+
+        <JobsList
+          jobs={jobs}
+          orgId={org.id}
+          type="public"
+        />
       </Stack>
     </>
   );
@@ -46,9 +58,11 @@ export const getServerSideProps = async ({
 }: GetServerSidePropsContext) => {
   const orgId = params?.orgId as string;
   const org = (await getOrg(orgId)) ?? null;
+  const jobs = (await getJobsByOrgId(orgId)) ?? null;
   return {
     props: {
       org,
+      jobs,
     },
   };
 };
