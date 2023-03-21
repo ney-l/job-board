@@ -1,7 +1,11 @@
+import { useEffect, useState } from 'react';
+
+import { Job } from '@/features/jobs';
+
 const data = {
   users: [
     {
-      id: 'KV4Lv9yUHtNVB42V0ZrFf',
+      id: 'user-1',
       createdAt: 1645628972465,
       email: 'user1@test.com',
       password: 'password',
@@ -100,6 +104,56 @@ export const getJobById = async (id: string) => {
   return Promise.resolve(
     data.jobs.find((job) => job.id === id)
   );
+};
+
+type User = {
+  id: string;
+  createdAt: number;
+  email: string;
+  password: string;
+  orgId: string;
+};
+
+export const useUser = () => {
+  const [state, setState] = useState<{
+    isLoading: boolean;
+    data: User | null;
+  }>({
+    isLoading: true,
+    data: null,
+  });
+
+  useEffect(() => {
+    Promise.resolve().then(() =>
+      setState({
+        isLoading: false,
+        data: data.users[0],
+      })
+    );
+  });
+
+  return state;
+};
+
+export const useJobs = (orgId: string) => {
+  const [state, setState] = useState<{
+    isLoading: boolean;
+    data: Job[];
+  }>({
+    isLoading: true,
+    data: [],
+  });
+
+  useEffect(() => {
+    getJobsByOrgId(orgId).then((jobs) =>
+      setState({
+        isLoading: false,
+        data: jobs,
+      })
+    );
+  }, [orgId]);
+
+  return state;
 };
 
 export default data;
