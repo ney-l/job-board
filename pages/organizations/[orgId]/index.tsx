@@ -11,6 +11,7 @@ import { JobsList } from '@/features/jobs';
 import { OrgInfo } from '@/features/organizations';
 import { PublicLayout } from '@/layouts';
 import { getJobsByOrgId, getOrg } from '@/mock';
+import { handleError } from '@/utils';
 
 type PublicOrganizationPageProps =
   InferGetServerSidePropsType<typeof getServerSideProps>;
@@ -70,9 +71,5 @@ export const getServerSideProps = async ({
     },
   };
 };
-
-function handleError(e: Error) {
-  console.log(e.message);
-}
 
 export default PublicOrganizationPage;
