@@ -40,7 +40,7 @@ const PublicOrganizationPage = ({
         </Heading>
 
         <JobsList
-          jobs={jobs}
+          jobs={jobs ?? []}
           orgId={org.id}
           type="public"
         />
@@ -57,8 +57,12 @@ export const getServerSideProps = async ({
   params,
 }: GetServerSidePropsContext) => {
   const orgId = params?.orgId as string;
-  const org = (await getOrg(orgId)) ?? null;
-  const jobs = (await getJobsByOrgId(orgId)) ?? null;
+
+  const [org, jobs] = await Promise.all([
+    getOrg(orgId).catch(handleError),
+    getJobsByOrgId(orgId).catch(handleError),
+  ]);
+
   return {
     props: {
       org,
@@ -66,5 +70,9 @@ export const getServerSideProps = async ({
     },
   };
 };
+
+function handleError(e: Error) {
+  console.log(e.message);
+}
 
 export default PublicOrganizationPage;
