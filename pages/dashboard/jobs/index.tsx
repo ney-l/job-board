@@ -5,13 +5,15 @@ import { ReactElement } from 'react';
 import { Link } from '@/components/link';
 import { Loading } from '@/components/loading';
 import { Seo } from '@/components/seo';
-import { JobsList } from '@/features/jobs';
+import { JobsList, useJobs } from '@/features/jobs';
 import { DashboardLayout } from '@/layouts/dashboard-layout';
-import { useUser, useJobs } from '@/mock';
+import { useUser } from '@/mock';
 
 const DashboardJobsPage = () => {
   const user = useUser();
-  const jobs = useJobs(user.data?.orgId ?? '');
+  const jobs = useJobs({
+    params: { orgId: user.data?.orgId ?? '' },
+  });
 
   if (jobs.isLoading) return <Loading />;
 

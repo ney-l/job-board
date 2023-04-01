@@ -7,9 +7,10 @@ import { ReactElement } from 'react';
 
 import { NotFound } from '@/components/not-found';
 import { Seo } from '@/components/seo';
-import { PublicJobInfo } from '@/features/jobs';
+import { getJob, PublicJobInfo } from '@/features/jobs';
+import { getOrg } from '@/features/organizations';
 import { PublicLayout } from '@/layouts';
-import { getJobById, getOrg } from '@/mock';
+// import { getJobById, getOrg } from '@/mock';
 import { handleError } from '@/utils';
 
 type PublicJobPageProps = InferGetServerSidePropsType<
@@ -54,8 +55,8 @@ export const getServerSideProps = async ({
   const orgId = params?.orgId as string;
   const jobId = params?.jobId as string;
   const [org, job] = await Promise.all([
-    getOrg(orgId).catch(handleError),
-    getJobById(jobId).catch(handleError),
+    getOrg({ orgId }).catch(handleError),
+    getJob({ jobId }).catch(handleError),
   ]);
 
   return {

@@ -7,10 +7,12 @@ import { ReactElement } from 'react';
 
 import { NotFound } from '@/components/not-found';
 import { Seo } from '@/components/seo';
-import { JobsList } from '@/features/jobs';
-import { OrgInfo } from '@/features/organizations';
+import { JobsList, getJobs } from '@/features/jobs';
+import {
+  getOrg,
+  OrgInfo,
+} from '@/features/organizations';
 import { PublicLayout } from '@/layouts';
-import { getJobsByOrgId, getOrg } from '@/mock';
 import { handleError } from '@/utils';
 
 type PublicOrganizationPageProps =
@@ -60,15 +62,12 @@ export const getServerSideProps = async ({
   const orgId = params?.orgId as string;
 
   const [org, jobs] = await Promise.all([
-    getOrg(orgId).catch(handleError),
-    getJobsByOrgId(orgId).catch(handleError),
+    getOrg({ orgId }).catch(handleError),
+    getJobs({ params: { orgId } }).catch(handleError),
   ]);
 
   return {
-    props: {
-      org,
-      jobs,
-    },
+    props: { org, jobs },
   };
 };
 
