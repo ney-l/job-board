@@ -1,6 +1,8 @@
 // components
 export * from './components/login-form';
-export * from './components/protected';
+
+// api
+export * from './api/logout';
 
 // types
 export * from './types';

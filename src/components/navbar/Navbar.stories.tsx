@@ -14,12 +14,26 @@ const Template: Story<NavbarProps> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  onLogout: () => console.log('Logged out!'),
+  logout: {
+    submit: () => console.log('Logged out!'),
+    isLoading: false,
+  },
+};
+
+export const WithLoading = Template.bind({});
+WithLoading.args = {
+  logout: {
+    submit: () => console.log('Logged out!'),
+    isLoading: true,
+  },
 };
 
 export const WithBackground = Template.bind({});
 WithBackground.args = {
-  onLogout: () => console.log('Logged out!'),
+  logout: {
+    submit: () => console.log('Logged out!'),
+    isLoading: false,
+  },
 };
 WithBackground.decorators = [
   (Story) => (
