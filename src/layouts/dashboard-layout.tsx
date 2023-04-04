@@ -4,8 +4,7 @@ import { ReactNode } from 'react';
 
 import { Link } from '@/components/link';
 import { Navbar } from '@/components/navbar';
-import { useLogout } from '@/features/auth';
-import { useUser } from '@/mock';
+import { useLogout, useUser } from '@/features/auth';
 
 type DashboardLayoutProps = {
   children: ReactNode;

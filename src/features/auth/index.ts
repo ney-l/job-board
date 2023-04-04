@@ -1,8 +1,9 @@
 // components
 export * from './components/login-form';
 
-// api
+// apis
 export * from './api/logout';
+export * from './api/get-auth-user';
 
 // types
 export * from './types';
