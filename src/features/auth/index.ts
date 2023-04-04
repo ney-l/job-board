@@ -1,5 +1,6 @@
 // components
 export * from './components/login-form';
+export * from './components/protected';
 
 // apis
 export * from './api/logout';
