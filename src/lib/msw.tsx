@@ -2,13 +2,13 @@ import { MSWDevTools } from 'msw-devtools';
 import { ReactNode } from 'react';
 
 import { CONSTANTS } from '@/constants';
-import { db, handlers } from '@/mocks';
+import { db, handlers } from '@/testing/mocks';
 
 export type MSWWrapperProps = {
   children: ReactNode;
 };
 
-require('@/mocks/initialize');
+require('@/testing/mocks/initialize');
 
 export const MSWWrapper = ({
   children,
