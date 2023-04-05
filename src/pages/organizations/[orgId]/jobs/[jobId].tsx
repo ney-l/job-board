@@ -60,8 +60,8 @@ export const getServerSideProps = async ({
 
   return {
     props: {
-      job,
-      org,
+      job: job ?? null,
+      org: org ?? null,
     },
   };
 };
