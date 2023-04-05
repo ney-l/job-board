@@ -19,6 +19,10 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "src"],
+  "include": [
+    "next-env.d.ts",
+    "src",
+    ".src/testing/setup-tests.ts"
+  ],
   "exclude": ["node_modules"]
 }

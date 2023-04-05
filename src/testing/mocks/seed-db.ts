@@ -1,4 +1,5 @@
-import testData from './data';
+import { testData } from '../test-data';
+
 import { db } from './db';
 
 export const seedDb = () => {

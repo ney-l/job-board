@@ -89,7 +89,10 @@ function TableRow<Entry extends Entity>({
   columns: DataTableColumn<Entry>[];
 }) {
   return (
-    <Tr key={entry.id || entryIndex}>
+    <Tr
+      data-testid={`table-row-${entryIndex}`}
+      key={entry.id || entryIndex}
+    >
       {columns.map(
         ({ field, title, render }, columnIndex) => (
           <Td key={title + columnIndex}>

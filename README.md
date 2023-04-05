@@ -2,6 +2,19 @@
 
 TO DO ...
 
+## Setup
+
+Environment Variables:
+Refer .env.example for how the environment variables file should look like.
+
+- Create .env.local to run the server locally.
+- Create .env.test to run the tests
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:3000
+NEXT_PUBLIC_API_MOCKING=true
+```
+
 ## Tech Stack
 
 Below is the tech stack that will be used to build this project, along with justifications for each tool or technology.

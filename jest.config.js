@@ -4,6 +4,7 @@ const createJestconfig = nextJest({
   dir: './',
 });
 
+/** @type {require('jest').Config} */
 const customJestConfig = {
   setupFilesAfterEnv: [
     '<rootDir>/src/testing/setup-tests.ts',
@@ -13,10 +14,6 @@ const customJestConfig = {
   moduleNameMapper: {
     '@/(.*)': '<rootDir>/src/$1',
   },
-  testPathIgnorePatterns: [
-    '<rootDir>/.next/',
-    '<rootDir>/node_modules/',
-  ],
 };
 
 module.exports = createJestconfig(customJestConfig);
