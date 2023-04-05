@@ -4,6 +4,7 @@ import {
   waitFor,
   within,
 } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { ReactElement } from 'react';
 import '@testing-library/jest-dom/extend-expect';
 
@@ -60,3 +61,4 @@ export const checkTableValues = <T extends Entity>({
 };
 
 export * from '@testing-library/react';
+export { userEvent };
