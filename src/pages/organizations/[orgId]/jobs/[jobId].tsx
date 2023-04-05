@@ -10,7 +10,6 @@ import { Seo } from '@/components/seo';
 import { getJob, PublicJobInfo } from '@/features/jobs';
 import { getOrg } from '@/features/organizations';
 import { PublicLayout } from '@/layouts';
-// import { getJobById, getOrg } from '@/mock';
 import { handleError } from '@/utils';
 
 type PublicJobPageProps = InferGetServerSidePropsType<
