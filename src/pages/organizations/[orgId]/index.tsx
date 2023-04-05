@@ -67,7 +67,10 @@ export const getServerSideProps = async ({
   ]);
 
   return {
-    props: { org, jobs },
+    props: {
+      org: org ?? null,
+      jobs: jobs ?? [],
+    },
   };
 };
 
