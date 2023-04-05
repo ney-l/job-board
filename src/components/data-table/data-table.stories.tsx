@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 
-import { getJobs } from '@/mock';
+import { getJobs } from '@/mocks';
 
 import { DataTable, DataTableProps } from './data-table';
 
