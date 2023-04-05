@@ -1,7 +1,9 @@
 import { useRouter } from 'next/router';
+import { ReactElement } from 'react';
 
 import { Seo } from '@/components/seo';
 import { LoginForm } from '@/features/auth';
+import { AuthLayout } from '@/layouts';
 
 const LoginPage = () => {
   const router = useRouter();
@@ -18,5 +20,9 @@ const LoginPage = () => {
     </>
   );
 };
+
+LoginPage.getLayout = (page: ReactElement) => (
+  <AuthLayout title="Log In">{page}</AuthLayout>
+);
 
 export default LoginPage;
