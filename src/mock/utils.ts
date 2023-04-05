@@ -1,6 +1,6 @@
 import { RestRequest } from 'msw';
 
-import CONSTANTS from '@/constants';
+import { CONSTANTS } from '@/constants';
 import { Entity } from '@/types';
 
 import data from './data';

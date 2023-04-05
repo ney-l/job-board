@@ -1,6 +1,6 @@
 import { rest } from 'msw';
 
-import CONSTANTS from '@/constants';
+import { CONSTANTS } from '@/constants';
 
 import {
   authenticate,

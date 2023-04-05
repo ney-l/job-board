@@ -1,6 +1,6 @@
 import Axios from 'axios';
 
-import CONSTANTS from '@/constants';
+import { CONSTANTS } from '@/constants';
 import { notificationsStore } from '@/stores/notifications';
 
 export const apiClient = Axios.create({

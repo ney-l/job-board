@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app';
 import dynamic from 'next/dynamic';
 import { ReactElement, ReactNode } from 'react';
 
-import CONSTANTS from '@/constants';
+import { CONSTANTS } from '@/constants';
 import { MSWWrapperProps } from '@/lib/msw';
 import { AppProvider } from '@/providers/app';
 

@@ -1,7 +1,7 @@
 import { MSWDevTools } from 'msw-devtools';
 import { ReactNode } from 'react';
 
-import CONSTANTS from '@/constants';
+import { CONSTANTS } from '@/constants';
 import { db, handlers } from '@/mock';
 
 export type MSWWrapperProps = {

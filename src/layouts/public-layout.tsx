@@ -2,7 +2,7 @@ import { Box } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 
 import { Link } from '@/components/link';
-import CONSTANTS from '@/constants';
+import { CONSTANTS } from '@/constants';
 
 export type PublicLayoutProps = {
   children: ReactNode;

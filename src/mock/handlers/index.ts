@@ -1,6 +1,6 @@
 import { rest } from 'msw';
 
-import CONSTANTS from '@/constants';
+import { CONSTANTS } from '@/constants';
 
 import { authHandlers } from './auth';
 import { jobHandlers } from './jobs';

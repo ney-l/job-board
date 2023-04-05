@@ -8,7 +8,7 @@ import {
   Button,
 } from '@chakra-ui/react';
 
-import CONSTANTS from '@/constants';
+import { CONSTANTS } from '@/constants';
 
 import { Link } from '../link';
 
