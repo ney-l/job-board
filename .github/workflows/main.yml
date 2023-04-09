@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: mv .env.example .env
+      - run: cp .env.example .env.test && mv .env.example .env
       - run: npm install
       - run: npm run test -- --maxWorkers=2
       - run: npm run lint
