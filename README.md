@@ -1,6 +1,7 @@
-# About
+# About [![CI/CD](https://github.com/ney-l/job-board/actions/workflows/main.yml/badge.svg)](https://github.com/ney-l/job-board/actions/workflows/main.yml)
 
-TO DO ...
+![App landing page screenshot](./docs/landing-page-screenshot.png)
+A Job Board app built using Next.js and TypeScript.
 
 ## Setup
 
