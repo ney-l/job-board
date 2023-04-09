@@ -11,7 +11,8 @@ jobs:
         with:
           node-version: 16
       - run: cp .env.example .env.test && mv .env.example .env
-      - run: npm install
+      - run: npm i -G pnpm
+      - run: pnpm install --with-deps
       - run: npm run test -- --maxWorkers=2
       - run: npm run lint
       - run: npm run format:check
