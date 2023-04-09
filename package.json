@@ -18,7 +18,9 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "cypress": "cypress open",
-    "cypress:headless": "cypress run"
+    "cypress:headless": "cypress run",
+    "e2e": "start-server-and-test start http://localhost:3000 cypress",
+    "e2e:headless": "start-server-and-test start http://localhost:3000 cypress:headless"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.9",
@@ -73,6 +75,7 @@
     "msw": "^0.47.4",
     "msw-devtools": "^1.0.2",
     "prettier": "2.7.1",
+    "start-server-and-test": "^1.14.0",
     "tsconfig-paths-webpack-plugin": "^4.0.0",
     "typescript": "4.8.2",
     "webpack": "^5.74.0"
